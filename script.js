@@ -15,31 +15,63 @@ var todoList = {
             }
         }
     },
-    addTodo: function(todoText) {   // Add an item to the todo list
+
+    // Add an item to the todo list
+    addTodo: function(todoText) {
         this.todos.push({
             todoText: todoText,
             completed: false
         });
         this.displayTodos();
     },
-    changeTodo: function(position, todoText) {  // Change a todo list item
+
+    // Change a todo list item
+    changeTodo: function(position, todoText) {
         this.todos[position].todoText = todoText;
         this.displayTodos();
     },
-    deleteTodo: function(position) {    // Delete an item from the todo list
+
+    // Delete an item from the todo list
+    deleteTodo: function(position) {
         this.todos.splice(position, 1);
         this.displayTodos();
     },
-    toggleCompleted: function(position) {   // Toggles todos as complete/incomplete
+
+     // Toggles todos as complete/incomplete
+    toggleCompleted: function(position) {
         var todo = this.todos[position];
         todo.completed = !todo.completed;
         this.displayTodos();
+    },
+    toggleAll: function() {
+        var totalTodos = this.todos.length;
+        var completedTodos = 0;
+
+    // Get number of completed todos.
+        for (var i = 0; i < totalTodos; i++) {
+            if (this.todos[i].completed === true) {
+                completedTodos++;
+        }
+    }
+
+    // If everything's true, make everything false.
+        if (completedTodos === totalTodos) {
+            for (var i = 0; i < totalTodos; i++) {
+                this.todos[i].completed = false;
+            }
+        }
+
+    // Displays the Todo List
+        this.displayTodos();
     }
 };
-// End todoList object
+
+
 
 //Test todoList
-// todoList.addTodo("item 1");
-// todoList.addTodo("item 2");
-// todoList.toggleCompleted(1); // Marks item 2 as complete
+todoList.addTodo("item 1"); // Adds item 1 to the todo list
+todoList.addTodo("item 2"); // Adds item 2 to the todo list
+todoList.toggleCompleted(0); // Marks item 1 as complete
+todoList.toggleCompleted(1); // Marks item 2 as complete
+todoList.toggleAll(); // Toggles all completed items as incomplete
 // End Test
