@@ -33,5 +33,3 @@ var todoList = {
     }
 };
 // End todoList object
-
-todoList.displayTodos();
