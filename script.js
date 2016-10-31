@@ -71,12 +71,9 @@ var todoList = {
     }
 };
 
+// Clicking "Display Todos" button runs todoList.displayTools
+var displayTodosButton = document.getElementById("displayTodosButton");
 
-
-// Test todoList
-// todoList.addTodo("item 1"); // Adds item 1 to the todo list
-// todoList.addTodo("item 2"); // Adds item 2 to the todo list
-// todoList.addTodo("item 3"); // Adds item 3 to the todo list
-// todoList.toggleCompleted(0); // Marks item 1 as complete
-// todoList.toggleAll(); // If all is complete, mark incomplete, else mark all complete
-// End Test
+displayTodosButton.addEventListener("click", function() {
+    todoList.displayTodos();
+});
