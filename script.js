@@ -59,6 +59,11 @@ var todoList = {
             for (var i = 0; i < totalTodos; i++) {
                 this.todos[i].completed = false;
             }
+    // Otherwise make everything true
+        } else {
+            for (var i = 0; i < totalTodos; i++) {
+                this.todos[i].completed = true;
+            }
         }
 
     // Displays the Todo List
@@ -68,10 +73,10 @@ var todoList = {
 
 
 
-//Test todoList
-todoList.addTodo("item 1"); // Adds item 1 to the todo list
-todoList.addTodo("item 2"); // Adds item 2 to the todo list
-todoList.toggleCompleted(0); // Marks item 1 as complete
-todoList.toggleCompleted(1); // Marks item 2 as complete
-todoList.toggleAll(); // Toggles all completed items as incomplete
+// Test todoList
+// todoList.addTodo("item 1"); // Adds item 1 to the todo list
+// todoList.addTodo("item 2"); // Adds item 2 to the todo list
+// todoList.addTodo("item 3"); // Adds item 3 to the todo list
+// todoList.toggleCompleted(0); // Marks item 1 as complete
+// todoList.toggleAll(); // If all is complete, mark incomplete, else mark all complete
 // End Test
