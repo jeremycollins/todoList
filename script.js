@@ -1,22 +1,23 @@
 // Create todoList object
 var todoList = {
-    todos: ["item 1", "item 2", "item 3"],
-    displayTodos: function() {
+    todos: [],
+    displayTodos: function() {  // Show the todo list
         console.log("My Todos", this.todos);
     },
-    addTodo: function(todo) {
-        this.todos.push(todo);
+    addTodo: function(todoText) {   // Add an item to the todo list
+        this.todos.push({
+            todoText: todoText,
+            completed: false
+        });
         this.displayTodos();
     },
-    changeTodo: function(position, newValue) {
+    changeTodo: function(position, newValue) {  // Change a todo list item
         this.todos[position] = newValue;
         this.displayTodos();
     },
-    deleteTodo: function(position) {
+    deleteTodo: function(position) {    // Delete an item from the todo list
         this.todos.splice(position, 1);
         this.displayTodos();
     }
 };
-
-todoList.displayTodos();
-todoList.deleteTodo(1);
+// End todoList object
