@@ -37,3 +37,9 @@ var todoList = {
     }
 };
 // End todoList object
+
+//Test todoList
+// todoList.addTodo("item 1");
+// todoList.addTodo("item 2");
+// todoList.toggleCompleted(1); // Marks item 2 as complete
+// End Test
