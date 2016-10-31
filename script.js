@@ -2,7 +2,10 @@
 var todoList = {
     todos: [],
     displayTodos: function() {  // Show the todo list
-        console.log("My Todos", this.todos);
+        console.log("My Todos:");
+        for (var i = 0; i < this.todos.length; i++) {
+            console.log(this.todos[i].todoText);
+        }
     },
     addTodo: function(todoText) {   // Add an item to the todo list
         this.todos.push({
