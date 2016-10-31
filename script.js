@@ -11,8 +11,8 @@ var todoList = {
         });
         this.displayTodos();
     },
-    changeTodo: function(position, newValue) {  // Change a todo list item
-        this.todos[position] = newValue;
+    changeTodo: function(position, todoText) {  // Change a todo list item
+        this.todos[position].todoText = todoText;
         this.displayTodos();
     },
     deleteTodo: function(position) {    // Delete an item from the todo list
