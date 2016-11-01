@@ -72,14 +72,12 @@ var todoList = {
 };
 
 // Clicking "Display Todos" button runs todoList.displayTools
-var displayTodosButton = document.getElementById("displayTodosButton");
-var toggleAllButton = document.getElementById("toggleAllButton");
-
-displayTodosButton.addEventListener("click", function() {
-    todoList.displayTodos();
-});
-
 // Clicking "Toggle All" button runs todoList.toggleAll
-toggleAllButton.addEventListener("click", function() {
-    todoList.toggleAll();
-});
+var handlers = {
+    displayTodos: function() {
+        todoList.displayTodos();
+    },
+    toggleAll: function() {
+        todoList.toggleAll();
+    }
+};
