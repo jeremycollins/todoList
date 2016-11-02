@@ -71,8 +71,7 @@ var todoList = {
     }
 };
 
-// Clicking "Display Todos" button runs todoList.displayTools
-// Clicking "Toggle All" button runs todoList.toggleAll
+// On click runs functions for displayTodos, toggleAll, addTodo, and changeTodo
 var handlers = {
     displayTodos: function() {
         todoList.displayTodos();
@@ -84,5 +83,12 @@ var handlers = {
         var addTodoTextInput = document.getElementById("addTodoTextInput");
         todoList.addTodo(addTodoTextInput.value);
         addTodoTextInput.value = "";
+    },
+    changeTodo: function() {
+        var changeTodoPositionInput = document.getElementById("changeTodoPositionInput");
+        var changeTodoTextInput = document.getElementById("changeTodoTextInput");
+        todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+        changeTodoPositionInput.value = "";
+        changeTodoTextInput.value = "";
     }
 };

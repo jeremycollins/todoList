@@ -13,9 +13,16 @@
             <button onclick="handlers.toggleAll()">Toggle All</button>
         </div>
         <div>
-            <button onclick="">Add</button>
+            <button onclick="handlers.addTodo()">Add</button>
             <input id="addTodoTextInput" type="text">
         </div>
+
+        <div>
+            <button onclick="handlers.changeTodo()">ChangeTodo</button>
+            <input id="changeTodoPositionInput" type="number">
+            <input id="changeTodoTextInput" type="text">
+        </div>
+
         <script src="script.js"></script>
     </body>
 </html>
