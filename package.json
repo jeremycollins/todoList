@@ -1,0 +1,22 @@
+{
+  "name": "todolist",
+  "version": "0.1.0",
+  "description": "A simple todo list application",
+  "main": "script.js",
+  "scripts": {
+    "test": "todoList.displayTodos();"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremycollins/todoList.git"
+  },
+  "keywords": [
+    "todo",
+    "list"
+  ],
+  "author": "Jeremy Collins",
+  "bugs": {
+    "url": "https://github.com/jeremycollins/todoList/issues"
+  },
+  "homepage": "https://github.com/jeremycollins/todoList#readme"
+}
