@@ -110,6 +110,7 @@ var view = {
         todosUl.innerHTML = "";     // Clears out list before adding new items
         for (var i = 0; i < todoList.todos.length; i++) {
             var todoLi = document.createElement("li");
+            todoLi.textContent = todoList.todos[i].todoText;
             todosUl.appendChild(todoLi);
         }
     }
