@@ -102,3 +102,15 @@ var handlers = {
         todoList.toggleAll();
     }
 };
+
+// Create view object to render Todo list to screen
+var view = {
+    displayTodos: function() {
+        var todosUl = document.querySelector("ul");
+        todosUl.innerHTML = "";     // Clears out list before adding new items
+        for (var i = 0; i < todoList.todos.length; i++) {
+            var todoLi = document.createElement("li");
+            todosUl.appendChild(todoLi);
+        }
+    }
+};
