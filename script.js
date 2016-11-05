@@ -29,24 +29,21 @@ var todoList = {
         var totalTodos = this.todos.length;
         var completedTodos = 0;
 
-    // Get number of completed todos.
-        for (var i = 0; i < totalTodos; i++) {
-            if (this.todos[i].completed === true) {
-                completedTodos++;
+    this.todos.forEach(function(todo) {
+        if (todo.completed === true) {
+            completedTodos++;
         }
-    }
+    });
 
-    // If everything's true, make everything false.
-        if (completedTodos === totalTodos) {
-            for (var i = 0; i < totalTodos; i++) {
-                this.todos[i].completed = false;
+        this.todos.forEach(function(todo) {
+            // If everything's true make everything false.
+            if (completedTodos === totalTodos) {
+                todo.completed = false;
+                // Otherwise make everything true.
+            } else {
+                todo.completed = true;
             }
-    // Otherwise make everything true
-        } else {
-            for (var i = 0; i < totalTodos; i++) {
-                this.todos[i].completed = true;
-            }
-        }
+        });
     }
 };
 
