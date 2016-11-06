@@ -101,6 +101,7 @@ var view = {
             todosUl.appendChild(todoLi);
         }, this);
     },
+    
     // Created delete buttons for each todo item
     createDeleteButton: function() {
         var deleteButton = document.createElement("button");
